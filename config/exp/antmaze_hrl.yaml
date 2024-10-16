@@ -1,0 +1,9 @@
+obs_dim: ???
+goal_dim: ???
+act_dim: ???
+batch_size: 1024
+ctx_size: ${model.model_config.segment_len}
+lr: 1e-4
+num_epochs: 200
+num_eval_rollouts: 50
+max_future_distance_for_low_goal: 3

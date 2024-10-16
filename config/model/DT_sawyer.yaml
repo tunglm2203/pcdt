@@ -1,0 +1,32 @@
+_target_: 'pcdt.model.DT_sawyer.DTAgent'
+obs_dim: ???
+act_dim: ???
+goal_dim: ???
+lr: ${exp.lr}
+num_eval_rollouts: ${exp.num_eval_rollouts}
+eval_last_k: ${eval_last_k}
+
+base_observation: null
+
+num_epochs: ${exp.num_epochs}
+goal_type: 'state_goal'
+
+stage: 'pl'  # policy learning
+
+model_config:
+  tjn_ckpt_path: ???
+  mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  mask_ratio_weights: [0.8, 0.05, 0.05, 0.05, 0.05]
+  embed_dim: 256
+  n_enc_layers: 3
+  n_head: 1
+  pdrop: 0.1
+  segment_len: ${exp.ctx_size}
+  use_pe_as_timestep: True
+  goal_condition: False
+  action_condition: True
+  pretrain_use_new_stack_so: True
+  pretrain_padding_zeros: True
+
+
+

@@ -1,0 +1,10 @@
+obs_dim: ???
+goal_dim: ???
+act_dim: ???
+batch_size: 1024
+lr: 1e-4
+ctx_size: 5
+future_horizon: 30
+num_epochs: 80
+use_scheduler: False
+num_eval_rollouts: 50

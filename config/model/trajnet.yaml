@@ -1,0 +1,25 @@
+_target_: 'pcdt.model.trajnet.TrajNet'
+env_name: ???
+obs_dim: ???
+action_dim: ???
+ctx_size: ???
+future_horizon: ???
+num_epochs: ???
+lr: ???
+seed: ???
+goal_type: ???
+stage: 'trl'  # trajectory representation learning
+model_config:
+  use_goal: True
+  mask_type: 'mae_rc'
+  ar_mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  rnd_mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  ar_mask_ratio_weights: [0.8, 0.05, 0.05, 0.05, 0.05]
+  n_slots: ${exp.ctx_size}
+  n_enc_layers: 2
+  n_dec_layers: 1
+  embed_dim: 256
+  n_head: 4
+  pdrop: 0.1
+  use_new_stack_so: True
+  padding_zeros: True

@@ -1,0 +1,8 @@
+goal_dim: 1  # return-to-go
+batch_size: 1024
+lr: 1e-4
+ctx_size: 5
+future_horizon: 20
+epochs: 60
+use_scheduler: False # won't be used in trl
+num_eval_rollouts: 10  # won't be used in trl

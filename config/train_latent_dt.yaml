@@ -1,0 +1,30 @@
+defaults:
+  - _self_
+  - model: policy_latent_dt
+  - exp: antmaze_latent_dt
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+wandb:
+  entity: ''
+  project: "LATENT_SKILL"
+  group: 'EXP'
+  tags: null
+  offline: False
+
+hydra:
+  output_subdir: null  
+  run:  
+    dir: .
+
+seed: 1
+env_name: ???  # specified later
+
+max_episode_length: 1000
+devices: [0]
+
+num_workers: 4
+train_size: 0.95
+eval_last_k: 5
+info: ''
+

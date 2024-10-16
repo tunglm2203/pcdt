@@ -1,0 +1,30 @@
+_target_: 'pcdt.model.DT_a.DTAgent'
+env_name: ???
+obs_dim: ???
+act_dim: ???
+goal_dim: ???
+goal_type: ???
+lr: ???
+num_eval_rollouts: ???
+eval_last_k: ???
+ctx_size: ${exp.ctx_size}
+future_horizon: ???
+num_epochs: ???
+
+seed: ???
+
+
+
+stage: 'pl'  # policy learning
+model_config:
+  tjn_ckpt_path: ???
+  mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  mask_ratio_weights: [0.8, 0.05, 0.05, 0.05, 0.05]
+  embed_dim: 256
+  n_enc_layers: 2
+  n_dec_layers: 1
+  n_head: 4
+  pdrop: 0.1
+  segment_len: ${exp.ctx_size}
+
+

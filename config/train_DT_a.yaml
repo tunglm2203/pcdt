@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - model: DT_a
+  - exp: antmaze_mae_hrl
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+wandb:
+  entity: 'uaimlab'
+  project: 'LATENT_SKILL_DHLEE'
+  group: 'EXP'
+  tags: null
+  offline: False
+
+hydra:
+  output_subdir: null  
+  run:  
+    dir: .
+
+seed: 1
+
+hrl_goal: False
+
+env_name: ???  # specified later
+max_episode_length: 1000
+devices: [0]
+num_workers: 16
+train_size: 0.95
+eval_last_k: 5
+info: ''
+

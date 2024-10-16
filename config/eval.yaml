@@ -1,0 +1,36 @@
+defaults:
+  - _self_
+  - model: mask_dt
+  - exp: antmaze_hrl
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+wandb:
+  entity: 'tunglm'
+  project: 'LATENT_SKILL_ABLATION'
+  group: 'EXP'
+  tags: null
+  offline: False
+
+hydra:
+  output_subdir: null  
+  run:  
+    dir: .
+
+seed: 1
+env_name: ???  # specified later
+
+max_episode_length: 1000
+devices: [0]
+
+hrl_goal: True
+
+n_videos_to_render: 1
+num_workers: 16
+train_size: 0.95
+eval_last_k: 10
+info: ''
+
+# Below part is different to train.yaml
+exp_path: null
+num_eval_rollouts: 10

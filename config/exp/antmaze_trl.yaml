@@ -1,0 +1,10 @@
+obs_dim: ???
+goal_dim: 2
+act_dim: ???
+batch_size: 1024
+lr: 1e-4
+ctx_size: 10
+future_horizon: 70
+num_epochs: 60
+use_scheduler: False # won't be used in trl
+num_eval_rollouts: 100  # won't be used in trl
