@@ -1,5 +1,3 @@
-# PCDT
-
 <div><h2>[IROS'24] Predictive Coding for Decision Transformer</h2></div>
 <br>
 
