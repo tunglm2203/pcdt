@@ -1,14 +1,16 @@
 # PCDT
 
-This is the official Pytorch implementation for the paper:
+<div><h2>[IROS'24] Predictive Coding for Decision Transformer</h2></div>
+<br>
 
-**Predictive Coding for Decision Transformer**
+**Tung M. Luu<sup>\*</sup>, Donghoon Lee<sup>\*</sup>, and Chang D. Yoo**
+<br>
+KAIST, South Korea
+<br>
+\*Equal contribution
+<br>
+[[arXiv]](https://arxiv.org/abs/2410.03408) [[Paper]](https://ieeexplore.ieee.org/document/10802437) 
 
-Tung M. Luu*, Donghoon Lee*, Chang D. Yoo
-
-*equal contribution
-
-A link to our paper can be found on : https://arxiv.org/abs/2410.03408
 
 ## Installation
 
@@ -53,21 +55,24 @@ Kitchen
 ./scripts\PCDT\launch_DT_kitchen.sh
 ```
 
-## The code will be updated further in the near future.
-
 ## Citation
-If you use this repo in your research, please consider citing the paper as follows
+If you use this repo in your research, please consider citing the paper as follows:
 ```
-@article{luu2024predictive,
+@inproceedings{luu2024predictive,
   title={Predictive Coding for Decision Transformer},
   author={Luu, Tung M and Lee, Donghoon and Yoo, Chang D},
-  journal={arXiv preprint arXiv:2410.03408},
-  year={2024}
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
 ## Acknowledgements
-This code is based on top of :
+- This work was partly supported by Institute for Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea
+government(MSIT) (No. 2021-0-01381, Development of Causal AI through Video Understanding and Reinforcement Learning, and Its Applications to Real Environments) and partly supported by Institute of Information &
+communications Technology Planning & Evaluation (IITP) grant funded by the Korea government(MSIT) [RS-2021-II212068, Artificial Intelligence Innovation Hub (Seoul National University).
+
+- This code is based on top of :
 [Decision Transformer](https://github.com/kzl/decision-transformer) , 
 [Goal-Conditioned Predictive Coding for Offline Reinforcement Learning](https://github.com/brown-palm/GCPC) , 
 [Masked Trajectory Models](https://github.com/facebookresearch/mtm).
